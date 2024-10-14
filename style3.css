@@ -1,0 +1,99 @@
+:root {
+    --card-bg: #ffffff;
+    --card-shadow: rgba(0, 0, 0, 0.1) 0px 4px 20px;
+    --main-color: #292c6d;
+    --accent-color: #f3950d;
+}
+
+.dashboard-container {
+    width: 100%;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 10rem; /* Space between cards */
+    flex-wrap: wrap; /* Allow cards to wrap */
+}
+
+.card {
+    background-color: var(--card-bg);
+    border-radius: 15px;
+    padding: 2rem;
+    width: 220px; /* Fixed width for cards */
+    box-shadow: var(--card-shadow);
+    text-align: center;
+    transition: transform 0.3s;
+    flex: 1; /* Allow cards to grow */
+    max-width: 220px; /* Prevents cards from exceeding this width */
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-heading {
+    font-size: 1.5rem;
+    color: var(--main-color);
+    margin-bottom: 0.5rem;
+}
+
+.card-body {
+    font-size: 2rem;
+    color: var(--accent-color);
+    font-weight: bold;
+}
+
+.image-container {
+    display: flex;
+    flex-wrap: wrap; /* Allows images to wrap on smaller screens */
+    justify-content: center; /* Center images */
+    align-items: center;
+    margin-top: 20px; /* Space above images */
+}
+
+.image-container img {
+    margin-top: 20px; /* Space above each image */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .dashboard-container {
+        gap: 5rem; /* Reduce gap on smaller screens */
+    }
+}
+
+@media (max-width: 992px) {
+    .dashboard-container {
+        flex-direction: column; /* Stack cards vertically */
+        align-items: center; /* Center cards */
+    }
+
+    .card {
+        max-width: 90%; /* Allow cards to take more width */
+        margin-bottom: 20px; /* Space between stacked cards */
+    }
+
+    .image-container img {
+        width: 100%; /* Make images full width */
+        max-width: 90%; /* Limit max width of images */
+    }
+}
+
+@media (max-width: 768px) {
+    .card-heading {
+        font-size: 1.3rem; /* Smaller heading font size */
+    }
+
+    .card-body {
+        font-size: 1.5rem; /* Smaller body font size */
+    }
+
+    .image-container {
+        flex-direction: column; /* Stack images vertically */
+    }
+
+    .pie,
+    .line {
+        width: 100%; /* Images take full width */
+    }
+}
