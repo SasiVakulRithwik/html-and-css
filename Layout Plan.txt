@@ -1,0 +1,10 @@
+Events Tab:
+
+Event conduction, filtering, events
+
+For event conduction, filtering by host and registering to events the user has to register or login first
+(display alert if you want to perform any of the above operation)
+
+
+	filtering - asc, desc, you as host
+
