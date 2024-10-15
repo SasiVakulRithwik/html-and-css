@@ -1,23 +1,58 @@
 .cards{
-    width: 96%;
-    margin: auto;
-    border: 5px solid black;
+    justify-items: center;
+    width: 100%;
+    /* margin: auto; */
+    /* border: 5px solid black; */
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     gap: 1%;
 }
 
+
 .card-container{
-    margin: 1px;
+    margin: 50px;
     width: 100%;
     max-width: 300px;
     /* height: 460px; */
     display: flex;
     flex-direction: column;
+    transition: transform 0.3s;
     background-color: hsl(216, 50%, 16%);
+    /* box-shadow: hsl(215, 33%, 51%) 0px 19px 38px, hsl(215, 33%, 51%) 0px 15px 12px; */
+    box-shadow: rgba(0, 78, 134, 0.4) -5px 5px, rgba(0, 78, 134, 0.3) -10px 10px, rgba(0, 78, 134, 0.2) -15px 15px, rgba(0, 78, 134, 0.1) -20px 20px, rgba(0, 78, 134, 0.05) -25px 25px;
     border-radius: 15px;
     padding: 1.5rem 2rem 1rem 2rem;
 }
+
+.card-container:hover{
+    transform: translateY(-5px);
+}
+
+@media (max-width : 399px){
+    .cards{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .card-container{
+        margin: 20px;
+    }
+}
+
+@media (max-width : 325px){
+    .cards{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .card-container{
+        max-width: 260px;
+        margin: 20px;
+    }
+}
+
 .hero-image{
     width : 100%;
     border-radius: 15px;

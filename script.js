@@ -19,3 +19,11 @@ toggle.onclick = function () {
   navigation.classList.toggle("active");
   main.classList.toggle("active");
 };
+
+function confirmSignOut() {
+  return confirm("Are you sure you want to sign out?");
+}
+
+function showProfile(){
+  window.location.href = "profile.html";
+}
